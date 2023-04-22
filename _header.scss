@@ -1,0 +1,193 @@
+.header {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.5s ease;
+    &_menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &-list {
+            height: auto;
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+        &-item {
+            list-style: none;
+            padding: 0 20px;
+        }
+        &-link {
+            position: relative;
+            color: $text-color;
+            padding: 15px 0;
+            list-style: none;
+            &::after {
+                content: '';
+                height: 5px;
+                width: 0;
+                background-color: #FFE600;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                transition: all 0.5s ease-in-out;
+            }    
+            &:hover {
+                font-weight: 700;
+                color: $text-color;
+                text-decoration-line: none;
+            }
+            &:hover::after {
+                width: 50%;
+                transform: translateX(100%);
+            }
+        }
+    
+    }
+    &_pr {
+        text-align: center;
+        align-items: center;
+        display: flex;
+        padding: 0 20px;
+        &-video {
+            margin: 0 20px;
+            color: $text-color;
+            &:hover {
+                color: #FFE600;
+                text-decoration-line: none;
+            }
+        }
+        &-btn {
+            width: 35%;
+            img {
+                width: 50%;
+                &:hover {
+                    transform: translateY(-10px);
+                }
+                cursor: pointer;
+            }
+        }
+    }
+   
+}
+.logo {
+    display: flex;
+    align-items: center;
+    transition: 0.3s ease;
+    img {
+        width: 100%;
+        &:hover {
+            transform: translateY(-10px);
+        }
+    }
+}
+
+.bx-menu {
+    color: #3F8CFF;
+    font-size: 35px;
+    text-align: right;
+    display: none;
+    cursor: pointer;
+}
+
+.sticky {
+    background: rgba(18, 53, 132, 0.8);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(18, 53, 132, 0.8);
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .header {
+        &_pr {
+            display: none;
+        }
+        &_menu {
+            margin-top: 10px;
+        }
+    }
+    .logo_img {
+        img {
+            width: 70%;
+        }
+    }
+ }
+ @media only screen and (max-width: 767px) {
+    .header {
+        &_pr {
+            &-video, &-btn {
+                display: none;
+            }
+        }
+        &_menu {
+            display: flex;
+            &-list {
+                display: flex;
+                flex-direction: column;
+                // justify-content: flex-start;
+                align-items: flex-start;
+                position: absolute;
+                top: 100%;
+                right: -100%;
+                background-color: #3F8CFF;
+                width: 260px;
+                margin-top: 0;
+                border-radius: 10px;
+                transition: all .50s ease;
+                
+            }
+            &-item {
+                padding: 0 25px;
+                transition: all 0.50s ease;
+                color: #000;
+                margin-top: 5px;
+                margin-bottom: 20px;
+                &:hover {
+                    color: $text-color;
+                    transform: translateY(5px);
+                }
+            }
+            &-link {
+                color: #000;
+                font-weight: 600;
+            }
+        }
+    }
+    .header_menu-list.is-active {
+        right: 0;
+    }
+    .logo {
+        margin-right: 50px;
+        img {
+            width: 70%;
+        }
+    }
+    .bx-menu {
+        display: block;
+        margin-left: 260px;
+        margin-right: -70px;
+    }
+
+}
+
+@media screen and (max-width:1024px) {
+    .header {
+        &_pr {
+            &-btn {
+                width: 37%;
+            }
+        }
+        
+    }
+}
+@media only screen and (max-width: 599px) {
+    .bx-menu {
+        margin-left: 90px;
+        margin-right: -50px;
+    }
+}

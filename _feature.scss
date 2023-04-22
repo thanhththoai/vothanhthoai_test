@@ -1,0 +1,41 @@
+.feature {
+    // height: 1185px;
+    margin-top: 115px;
+    &_title {
+        &-content {
+            p {
+                font-family: "a가을소풍B";
+                font-size: 54px;
+                color:  $second-color;
+                margin-bottom: 37px;
+            }
+            span {
+                font-size: 18px;
+                color: $primary-color;
+            }
+        }
+    }
+    &_img {
+        margin-top: 80px;
+        margin-bottom: 150px;
+    }
+}
+@media screen and (max-width:599px) { 
+    .feature {
+        margin-top: 80px;
+        &_title {
+            &-content {
+                p {
+                    font-size: 34px;
+                }
+                span {
+                    font-size: 14px;
+                }
+            }
+        }
+        &_img {
+            margin-bottom: 50px ;
+        }
+
+    }
+}

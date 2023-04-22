@@ -1,0 +1,55 @@
+.service {
+    position: relative;
+    text-align: center;
+    font-family: "NotoSansKR-Black";
+    font-size: 38px;
+    background-color: #fff;
+    padding: 50px 30px;
+    &_content {
+        display: flex;
+        text-align: center;
+        &-header {
+            padding: 20px;
+        }
+        &-text {
+            max-height: 50px;
+            text-align: center;
+            margin: 25px 5px;
+        }
+    }
+    &_img {
+        width: 100%;
+        margin: 100px 20px;
+        
+    }
+}
+@media screen and (max-width:767px) {
+    .service {
+        font-size: 28px;
+        &_img {
+            width: 50%;
+            margin: 50px 120px;
+        }
+    }
+}
+@media screen and (max-width: 599px ) {
+    .service {
+        font-size: 20px;
+        &_img {
+            width: 50%;
+            margin: 50px 80px;
+        }
+    }
+}
+@media screen and (min-width:992px) {
+    .service {
+        font-size: 28px;
+        &_title {
+            p {
+                margin: 10px 30px;
+            }
+
+        }
+    }
+
+}

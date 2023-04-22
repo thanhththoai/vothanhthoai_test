@@ -1,0 +1,90 @@
+.media {
+    margin: 120px 0;
+    &_title {
+        font-family: "NotoSansKR-Black";
+        font-size: 38px;
+    }
+    &_list {
+        display: grid;
+        grid-template-columns: 310px 310px 310px;
+        column-gap: 20px;
+        &-item {
+            margin-top: 25px;
+        }
+    }
+    &_img {
+        margin-bottom: 20px;
+        img {
+            max-height: 200px;
+            width: 300px;
+            transition: 0.5s;
+            cursor: pointer;
+            &:hover {
+                transform: translate(0,-20px);
+            }
+        }
+    }
+    &_des {
+        font-family: "NotoSansKR-Medium";
+        font-size: 18px;
+    }
+    &_date {
+        p {
+            color: #dbdee0;
+        }
+    }
+}
+.listPage {
+    padding: 10px;
+    text-align: center;
+    list-style: none;
+    li {
+        background-color: #dbdee0;
+        height: 36px;
+        width: 36px;
+        padding: 5px;
+        margin-left: 5px;
+        display: inline-block;
+        cursor: pointer;
+    }
+}
+li.active {
+    background-color: $third-color;
+    color: $text-color;
+}
+
+
+@media screen and (max-width:1024px) {
+    .media {
+        &_list {
+            grid-template-columns: 290px 290px 290px;
+        }
+    }
+}
+@media screen and (max-width:767px) {
+    .media {
+        &_list {
+            grid-template-columns: 230px 230px;
+        }
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .media {
+        &_list {
+            grid-template-columns: 290px 290px;
+        }
+    }
+    
+}
+@media screen and (max-width:599px) { 
+    .media {
+        &_title {
+            font-size: 28px;
+        }
+        .media {
+            &_list {
+                grid-template-columns: 290px;
+            }
+        }
+    }
+}

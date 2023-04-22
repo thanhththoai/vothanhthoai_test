@@ -1,0 +1,99 @@
+.about {
+    // padding: 40px;
+    background-image: url(./images/about-main.png);
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+    &_img {
+        align-items: center;
+        img {
+            position: relative;
+            left: 27%;
+            width: 40%;
+            transform: translateX(0px);
+            opacity: 1;
+            &:hover {
+                transform: translateX(40px);
+                opacity: 1;
+                transition: 1s ease;
+                transition-delay: 0.3s;
+                // transition-property: transform, opacity;
+            }
+        }
+    }
+    &_talk {
+        img {
+            position: absolute;
+            left: 28%;
+            top: 55%;
+        }
+    }
+    &_title {
+        padding: 50px;
+        text-align: center;
+        // margin-top: 100px;
+        margin-bottom: 25px;
+        font-size: 22px;
+        color: $text-color;
+    }
+    &_text {
+        font-size: 38px;
+        margin-bottom: 25px;
+        span {
+            color: yellow;
+        }
+    }
+}
+@media screen and (max-width:767px) {
+    .about {
+        &_talk {
+            img {
+                width: 70%;
+                left: 10%;
+                top: 70%;
+            }
+        }
+    }
+}
+@media screen and (max-width:599px) {
+    .about {
+        &_title {
+            padding: 50px 0;
+        }
+        &_text {
+            font-size: 20px;
+        }
+        &_img {
+            img {
+                width: 50%;
+            }
+        }
+        &_talk {
+            img {
+                width: 60%;
+                left: 10%;
+                top: 75%;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .about {
+        &_talk {
+            img {
+                width: 70%;
+                left: 10%;
+                top: 60%;
+            }
+        }
+    }
+    }
+@media screen and (max-width:1024px) { 
+.about {
+    &_talk {
+        img {
+            left: 15%;
+        }
+    }
+}
+}

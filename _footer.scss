@@ -1,0 +1,41 @@
+.footer {
+    margin-left: 100px;
+    padding: 40px;
+    &_logo {
+        margin-bottom: 10px;
+    }
+    &_contact {
+        font-size: 16px;
+        color: #9A9A9A;
+    }
+    &_icon {
+        i {
+            margin-right: 20px;
+            color: #9A9A9A;
+            margin-top: 20px;
+        }
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .footer {
+        margin-left: 0;
+    }
+}
+@media screen and (max-width:1024px) {
+    .footer {
+        margin-left: 0;
+    }
+}
+@media screen and (max-width:767px) {
+    .footer {
+        display: flex;
+        text-align: center;
+        &_logo {
+            display: flex;
+            justify-content: center;
+        }
+        &_contact {
+            margin: 20px 0px;
+        }
+    }
+}

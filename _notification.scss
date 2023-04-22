@@ -1,0 +1,49 @@
+.notification {
+    margin: 115px 0;
+    &_title {
+        font-family: "NotoSansKR-Black";
+        font-size: 38px;
+        p {
+            margin-bottom: 35px;
+        }
+    }
+    &_text {
+        p {
+            margin-left: 25px;
+            font-family: "NotoSansKR-Medium";
+            font-size: 18px;
+            color: $second-color;
+        }
+    }
+    &_date {
+        p {
+            margin-left: 25px;
+            color: #dbdee0;
+        }
+
+    }
+}
+.line {
+    background-color: $second-color;
+    height: 2px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.listPage1 {
+    padding: 10px;
+    text-align: center;
+    list-style: none;
+    li {
+        background-color: #dbdee0;
+        height: 36px;
+        width: 36px;
+        padding: 5px;
+        margin-left: 5px;
+        display: inline-block;
+        cursor: pointer;
+    }
+}
+li.active {
+    background-color: $third-color;
+    color: $text-color;
+}

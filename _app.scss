@@ -1,0 +1,252 @@
+.app {
+    background-color: #E3E7EB;
+    &_contruct {
+        display: flex;
+        margin-top: 75px;
+        margin-bottom: -28px;
+  }
+  &_contructs {
+    height: 180px;
+    width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    margin-bottom: 40px;
+    border: 1px solid #E3E7EB;
+    border-radius: 25px;
+    color: $text-color;
+    font-size: 18px;
+    span {
+        font-family: "NotoSansKR-Black";
+        font-size: 20px;
+        color:  $second-color;
+        margin-bottom: 20px;
+    }
+    p {
+        margin-top: 15px;
+        color: $primary-color;
+    }
+  }
+  &_step {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    li {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        // justify-content: center;
+        // margin: 0 20px;
+    }
+    i {
+        display: none;
+    }
+  }
+  &_progress {
+    width: 30px;
+    height: 30px;
+    margin-right: 25px;
+    border-radius: 50%;
+    background-color: #dbdee0;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+    &::after {
+        content: "";
+        position: absolute;
+        width: 5px;
+        height: 190px;
+        background-color: #dbdee0 ;
+        right: 30px;
+        left: 50%;
+        bottom: 30px;
+        transform: translateX(-50%);
+    }
+  }
+  &_img {
+    margin-top: 90px;
+    margin-left: 170px;
+    display: none;
+    img {
+        width: 100%;
+    }
+  }
+
+}
+.one::after {
+    width: 0;
+    height: 0;
+}
+.app_progress.active {
+    background-color:  $third-color;
+}
+.app_progress.active::after {
+    background-color:  $third-color;
+}
+.app_contructs.active {
+    display: block;
+    background-color:  $third-color;
+    span {
+        color: $text-color;
+    }
+    p {
+        color: #d0d0d0;
+    }
+
+}
+
+.app_img.active {
+    display: block;
+}
+@media screen and (max-width:1024px) {
+    .app {
+        &_img {
+                margin-top: 185px;
+
+        }
+    }
+    
+}
+
+@media screen and (max-width:767px) {
+    .app {
+        &_contruct {
+            display: flex;
+            flex-direction: column;
+            margin-top: 30px;
+        }
+        &_contructs {
+            display: none;
+            height: 150px;
+            width: 150px;
+            span { 
+                font-size: 16px;
+            }
+            p {
+                display: none;
+            }
+        }
+        &_step {
+            flex-direction: row;
+            li {
+                flex-direction: column;
+            }
+        }
+        &_img {
+            margin-top: 22px;
+            margin-left: 105px;
+            margin-bottom: 30px;
+            img {
+                width: 70%;
+            }
+        }
+        &_progress {
+            margin: 20px 59px;
+            z-index: 2;
+        &::after {
+            z-index: 1;
+            width: 128px;
+            height: 5px;
+            background-color: #dbdee0;
+            top: 14px;
+            left: -53px;
+            z-index: 1;
+        }
+    }
+        .one::after {
+            width: 0;
+            height: 0;
+        }
+        
+    }
+    .app_contructs.active {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .app {
+        &_contructs {
+            font-size: 14px;
+            width: 230px;
+        }
+        &_img {
+            margin-left: 60px;
+        }
+    }
+}
+// @media only screen and (min-width: 1024px) and (max-width: 1999px) {
+//     .app {
+//         &_img {
+//             margin-top: 148px;
+//             margin-left: 89px;
+
+//         }
+//     }
+// }
+@media screen and (min-width:1200px) {
+    .app {
+        &_img {
+                margin-top: 64px;
+
+        }
+    }
+    
+}
+@media screen and (max-width:599px) { 
+    .app {
+        &_contruct {
+            display: flex;
+            flex-direction: column;
+            margin-top: 0;
+        }
+        &_contructs {
+            display: none;
+            height: 150px;
+            width: 150px;
+            span { 
+                font-size: 16px;
+            }
+            p {
+                display: none;
+            }
+        }
+        &_step {
+            flex-direction: row;
+            li {
+                flex-direction: column;
+            }
+        }
+        &_img {
+            margin-top: 10px;
+            margin-left: 55px;
+            margin-bottom: 30px;
+            img {
+                width: 70%;
+            }
+        }
+        &_progress {
+            margin: 20px 25px;
+            z-index: 2;
+        &::after {
+            z-index: 1;
+            width: 52px;
+            height: 5px;
+            background-color: #dbdee0;
+            top: 14px;
+            left: -24px;
+            z-index: 1;
+        }
+    }
+        .one::after {
+            width: 0;
+            height: 0;
+        }
+        
+    }
+    .app_contructs.active {
+        display: none;
+    }
+}
